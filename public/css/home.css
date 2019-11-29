@@ -35,3 +35,7 @@ h1, h2, h3, h4, h5 {
 .devamini-oku {
     background: #212121 !important;
 }
+
+.card .header a {
+    display: block;
+}

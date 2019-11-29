@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel='stylesheet' href='/css/bootstrap.min.css')
+        script(src='/javascripts/bootstrap.min.js')
+        script(src='/javascripts/jquery.min.js')
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+        link(rel='stylesheet' href='css/home.css')
+        link(href='https://fonts.googleapis.com/css?family=Lato|Roboto:300&display=swap' rel='stylesheet')
+        title 0xdeadbeef
+    body(style='position:relative; padding-bottom: 30px')
+        div.container
+            header
+                include header.jade
+            section(style='margin-top:15px;padding: 10px;')
+                div.col-12
+                    h3 #{key} arama sonucunda 35 adet makale bulundu.
+                    p #{key}
+                    div.form-group.col-3(style='position: absolute; top:0; right:0;')
+                        span Filterele
+                        select.form-control
+                            option Tarih
+                            option Beğeni
+                            option Görülme Sayısı
+            footer.footer.mt-5(style='position:absolute;bottom:0;left:0;width:100%;text-align:center')
+                include footer.jade

@@ -18,20 +18,20 @@ html(lang="en")
             section(style='margin-top:15px')
                 .card(style='width: 100%; height: 350px; border: 1px solid #ddd')
                     .header(style='margin-left:5px')
-                        p(style='margin-top:5px;font-weight:300;font-size:1.2rem;margin-bottom: 0') Unit Test Nedir ?
+                        a(href='/posts/5' style='margin-top:5px;font-weight:300;font-size:1.2rem;margin-bottom: 0') Kodlama Ve Tasarım
                         span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-calendar" aria-hidden="true"></i> 28.11.2018
                         span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-tags" aria-hidden="true"></i> Test
                         span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-comments" aria-hidden="true"></i> 5
                         span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-heart" aria-hidden="true"></i> 30
                         span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-eye" aria-hidden="true"></i> 130
                     .content(style='max-height: 250px; overflow: hidden; padding:5px; font-size:.9rem !important;')
-                        p Unit test, software testing(yazılım test etme) metodlarından sadece birisidir. Unit birim anlamına gelir. Matematikteki anlamı bir çokluğu oluşturan varlıkların her biri ya da bir kümenin her elemanı. Yazılımda, kümeye yazdığımız program elemenlarına da fonksiyonlarımız diyebiliriz. Bu fonksiyonları parçaları test etmeye Unit Test denir. Unit testin amacı projemizin gelişim aşamasında iken parçaların doğru çalıştığından emin? olmamızı sağlar. Burda emin? yazmamın nedenini Edsger W. Dijkstra'nın 1969'da söylediği güzel bir söz ile anlatayım "Testing shows the presence, not the absence of bugs". Yani testler bugların yokluğunu değil varlığını gösterir. Şimdi test yazma kısmına geçmeden bu metodları incelemek istiyorum. hashTheUserPassword metodu içinde 3.parti bir kütüphanenin fonksiyonunu kullanılıyor hash algoritması için. Burda eğer ben metodu direk teste sokarsam benim testim bcrypt kütüphanesinin hash metodunu da test etmiş olacak. Unit test kavramına ters bir durum oluşuyor ve eğer o 3.parti fonksiyonun içinde bir hata var ise benim testimin fail olmasına yol açacak. Biz bunun testini unit test aşamasında yapmak istemiyoruz. Onlar başka test aşamalarında test ediliyor ancak konumuz bu değil. Burdan inceleyebilirsiniz geriye kalan test metodlarını.Ben burda 2 tane 3.parti modül kullandım ve test içinde Jest frameworkünü kullandım. Çok basit ve güçlü bir tool. Web sayfasından kolayca öğrenebilirsiniz. Burda dilin ve toolların bir önemi yok. Anlatmak istediğim meseleyi anladıysanız burdaki diğer 3.parti şeyleri anlamanıza gerek yok.Şimdi test sonuçlarına gelelim.
+                        p Görüyoruz ki birçok yazılımcı neyin ne olduğunu, yeni veya eski teknolojilerin nasıl kullanıldığını, büyük yazılım firmalarının ürettiği ürünlerin nasıl ve hangi şartlarda kullanılacağını, hangi problemlere çözüm getirdiğini kısa ya da orta vadeli bir zaman süreci içerisinde öğrenebilme ve kullanabilme becerisi gösterebiliyor ve bu konular ile ilgili Türkçe ya da yabancı kaynaklardan bilgilere kolay bir şekilde erişebiliyor. Edindiği bilgilerle projesinde çözümler geliştirebiliyor. Kimleri butonun altında bu çözümleri uyguluyor veya bir sınıf yazarak bir iki metoda işlemleri bölüştürüp “nesne yönelimli programlama yaparak”! çözüm geliştiriyor. Bir iki veya en kötü ihtimalle üç senelik bir süreç içerisinde yazılım geliştirmeye başlayan bir yazılımcı bu zaman dilimi içerisinde sadece “bu nedir, o metod ne işi yapar, şu sınıfın şu metodunu kullanırsan şunu yapar, yok şu sınıf şu işi kolay yapar, bak hazırı var , aaa X firması yeni bir Y çıkarmış hemen bakayım kim ne yazmış hemen öğreneyim, bak Z veritabanına bağlanmanın yenisi çıkmış! aman ne harika hadi zamanımı buna harcayayım (Yani şu satırları yazarken bile daral geldi, örnek vermeyi kestim)...” gibi yaklaşımlarla kişisel ve kariyer gelişimi için zaman ve emek harcıyor. Zaman içerisinde çöpe attığınız bilgilerin bir hesabını yaptınız mı ? Bence çok geçmeden yapın derim, aslında birçok bilgi için harcadığımız eforun bize kazanımlarını düşünmek gerekiyor. Şöyle küçük bir örnek verecek olursak; zamanında .NET kullanarak connection nesnesi ile veritabanına bağlantı sağlamak, bir command nesnesi ile komut çalıştırmak ve bir reader nesnesi ile gelen sonuçları okumak için ne kadar zaman harcadık, bu nesnelerin detayları ile ilgili ne kadar araştırma yaptık, neler okuduk ve nekadarını kullandık ? Peki ya şimdi ? ortalıkda pek bir connection , commad nesneleri kalmadı gibi sanki ne dersiniz, DataSetler, DataTable’lara ne oldu (Tamam tamam hala kullanan büyük bir çoğunluk var. Onları da çok yakın bir zamanda unutacağız )! Bu nesneler yerlerini ORM ve alt başlıklarına (entitiy vs vs) devretti gidiyor ve birçok kişi bu trende yerini almak için yine zaman ve para harcıyor. Peki bunları normal süreçler olarak düşünüp –ki bunların olmaması gerektiğini söylemiyorum kesinlikle ama yazılımı ve yazılımcılığı da sadece belirli bir altyapı ya da ürünün kitapsal yani ürünün yardım sayfalarından veya ürün sahibinin dökümanlarından rahatlıkla bulunabilecek bilgilerin ezberlenip kullanılması olduğu düşünülmesin ya da yayınlanan içeriklerle düşündürülmesin yanlış olduğunu belirtmek istiyorum. - asıl sorunun ne olduğu üzerinde konuşalım.
                     .owncard-footer(style='position:absolute; bottom:0; left:0; width:100%')
                         a.btn.btn-sm.btn-warning.pull-right.mr-2.mb-2.devamini-oku(href='#' style='border:none; background: red; font-size: .8rem; color: white') Devamını Oku
                         span.like.ml-2(style='cursor:pointer;') <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
                 .card(style='width: 100%; height: 350px; border: 1px solid #ddd')
                     .header(style='margin-left:5px')
-                        p(style='margin-top:5px;font-weight:300; font-size:1.2rem;margin-bottom: 0') Unit Test Nedir ?
+                        a(href='/posts/5' style='margin-top:5px;font-weight:300; font-size:1.2rem;margin-bottom: 0') Unit Test Nedir ?
                         span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-calendar" aria-hidden="true"></i> 28.11.2018
                         span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-tags" aria-hidden="true"></i> Test
                         span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-comments" aria-hidden="true"></i> 5
@@ -45,4 +45,15 @@ html(lang="en")
             footer.footer.mt-5(style='position:absolute;bottom:0;left:0;width:100%;text-align:center')
                 include footer.jade
             script.
+                $('.like').mouseenter( (e) => {
+                    $(e.target).removeClass('fa-heart-o');
+                    $(e.target).addClass('fa-heart');
+                    $(e.target).css('color', 'red');
+                });
+
+                $('.like').mouseleave( (e) => {
+                    $(e.target).removeClass('fa-heart');
+                    $(e.target).addClass('fa-heart-o');
+                    $(e.target).css('color', 'black');
+                });
                 

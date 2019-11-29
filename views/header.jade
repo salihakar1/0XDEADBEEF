@@ -1,5 +1,5 @@
 nav.navbar.navbar-expand-lg.navbar-light(style='background: #9C27B0;color: white !important;border: none;border-radius:2px;border-top:none')
-    a.navbar-brand(href='#' style='color:#212121') 0xdeadbeef
+    a.navbar-brand(href='/' style='color:#212121') 0xdeadbeef
     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
@@ -9,8 +9,13 @@ nav.navbar.navbar-expand-lg.navbar-light(style='background: #9C27B0;color: white
                     | Anasayfa 
                     span.sr-only (current)
             li.nav-item
-                a.nav-link(href='login') Giriş Yap
+                a.nav-link(href='/login') Giriş Yap
             li.nav-item
-                a.nav-link(href='signup') Kayıt Ol
+                a.nav-link(href='/profile') Profil
+            li.nav-item
+                a.nav-link(href='/signup') Kayıt Ol
             li.nav-item
                 a.nav-link(href='#') Çıkış Yap
+        div.search
+            form(action='/search' method='get')
+                input(type='text' name='key' placeholder='ara')

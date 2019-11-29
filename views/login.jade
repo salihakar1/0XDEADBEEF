@@ -8,21 +8,32 @@ html(lang="en")
         script(src='/javascripts/bootstrap.min.js')
         script(src='/javascripts/jquery.min.js')
         link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-        link(rel='stylesheet' href='css/home.css')
+        link(rel='stylesheet' href='css/login.css')
         link(href='https://fonts.googleapis.com/css?family=Lato|Roboto:300&display=swap' rel='stylesheet')
         title 0xdeadbeef
     body(style='position:relative; padding-bottom: 30px')
         div.container
             header
                 include header.jade
-            section(style='margin-top:15px')
-                p Giriş Yap
-                div.row
-                    div.form-group
-                        label(for='username') Kullanıcı Adı
-                        input.form-control(id='username' name='username')
-                    div.form-group
-                        label(for='password') Şifre
-                        input.form-control(id='password' name='password') 
+            section(style='margin-top:15px;padding: 10px;')
+                h3 Giriş Yap
+                div.container
+                    div.row
+                        div.col-12.col-lg-4.offset-lg-4
+                            form(style='border:1px solid #ddd;padding: 10px;margin-top:15px')
+                                div.form-group
+                                    label(for='username') Kullanıcı Adı
+                                    input.form-control(id='username' name='username')
+                                div.form-group
+                                    label(for='password') Şifre
+                                    input.form-control(id='password' name='password')
+                                input.btn.btn-block.btn-warning(value='Giriş yap')
+                                #gSignInWrapper.mt-2
+                                  #customBtn.customGPlusSignIn
+                                    span.icon
+                                    span.buttonText Google
+                                #fb-root.mt-2
+                                script(async='', defer='', crossorigin='anonymous', src='https://connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v5.0&appId=1826404827635376&autoLogAppEvents=1')
+                                .fb-login-button(data-width='', data-size='medium', data-button-type='login_with', data-auto-logout-link='false', data-use-continue-as='false')
             footer.footer.mt-5(style='position:absolute;bottom:0;left:0;width:100%;text-align:center')
                 include footer.jade

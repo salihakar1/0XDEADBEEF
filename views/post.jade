@@ -8,7 +8,7 @@ html(lang="en")
         script(src='/javascripts/bootstrap.min.js')
         script(src='/javascripts/jquery.min.js')
         link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-        link(rel='stylesheet' href='css/home.css')
+        link(rel='stylesheet' href='/css/post.css')
         link(href='https://fonts.googleapis.com/css?family=Lato|Roboto:300&display=swap' rel='stylesheet')
         title 0xdeadbeef
     body(style='position:relative; padding-bottom: 30px')
@@ -16,6 +16,50 @@ html(lang="en")
             header
                 include header.jade
             section(style='margin-top:15px')
-                p Burası #{id}
+                div.container
+                    div.row
+                        div.col-12
+                            h3.postBaslik(style='margin-bottom:0!important;') Kodlama Ve Tasarım
+                            span.like.ml-2(style='cursor:pointer; position:absolute; right:15px; top:15px;') <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                            p.kullanici-adi(style='margin-bottom:0!important;') @alikemal
+                            span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-calendar" aria-hidden="true"></i> 28.11.2018
+                            span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-tags" aria-hidden="true"></i> Test
+                            span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-comments" aria-hidden="true"></i> 5
+                            span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-heart" aria-hidden="true"></i> 30
+                            span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-eye" aria-hidden="true"></i> 130
+                    div.row
+                        div.icerik.col-12
+                            p.icerik-baslik Görüyoruz ki birçok yazılımcı neyin ne olduğunu, yeni veya eski teknolojilerin nasıl kullanıldığını, büyük yazılım firmalarının ürettiği ürünlerin nasıl ve hangi şartlarda kullanılacağını, hangi problemlere çözüm getirdiğini kısa ya da orta vadeli bir zaman süreci içerisinde öğrenebilme ve kullanabilme becerisi gösterebiliyor ve bu konular ile ilgili Türkçe ya da yabancı kaynaklardan bilgilere kolay bir şekilde erişebiliyor. Edindiği bilgilerle projesinde çözümler geliştirebiliyor. Kimleri butonun altında bu çözümleri uyguluyor veya bir sınıf yazarak bir iki metoda işlemleri bölüştürüp “nesne yönelimli programlama yaparak”! çözüm geliştiriyor. Bir iki veya en kötü ihtimalle üç senelik bir süreç içerisinde yazılım geliştirmeye başlayan bir yazılımcı bu zaman dilimi içerisinde sadece “bu nedir, o metod ne işi yapar, şu sınıfın şu metodunu kullanırsan şunu yapar, yok şu sınıf şu işi kolay yapar, bak hazırı var , aaa X firması yeni bir Y çıkarmış hemen bakayım kim ne yazmış hemen öğreneyim, bak Z veritabanına bağlanmanın yenisi çıkmış! aman ne harika hadi zamanımı buna harcayayım (Yani şu satırları yazarken bile daral geldi, örnek vermeyi kestim)...” gibi yaklaşımlarla kişisel ve kariyer gelişimi için zaman ve emek harcıyor. Zaman içerisinde çöpe attığınız bilgilerin bir hesabını yaptınız mı ? Bence çok geçmeden yapın derim, aslında birçok bilgi için harcadığımız eforun bize kazanımlarını düşünmek gerekiyor. Şöyle küçük bir örnek verecek olursak; zamanında .NET kullanarak connection nesnesi ile veritabanına bağlantı sağlamak, bir command nesnesi ile komut çalıştırmak ve bir reader nesnesi ile gelen sonuçları okumak için ne kadar zaman harcadık, bu nesnelerin detayları ile ilgili ne kadar araştırma yaptık, neler okuduk ve nekadarını kullandık ? Peki ya şimdi ? ortalıkda pek bir connection , commad nesneleri kalmadı gibi sanki ne dersiniz, DataSetler, DataTable’lara ne oldu (Tamam tamam hala kullanan büyük bir çoğunluk var. Onları da çok yakın bir zamanda unutacağız )! Bu nesneler yerlerini ORM ve alt başlıklarına (entitiy vs vs) devretti gidiyor ve birçok kişi bu trende yerini almak için yine zaman ve para harcıyor. Peki bunları normal süreçler olarak düşünüp –ki bunların olmaması gerektiğini söylemiyorum kesinlikle ama yazılımı ve yazılımcılığı da sadece belirli bir altyapı ya da ürünün kitapsal yani ürünün yardım sayfalarından veya ürün sahibinin dökümanlarından rahatlıkla bulunabilecek bilgilerin ezberlenip kullanılması olduğu düşünülmesin ya da yayınlanan içeriklerle düşündürülmesin yanlış olduğunu belirtmek istiyorum. - asıl sorunun ne olduğu üzerinde konuşalım.
+                        h3.col-12 Yorumlar
+                        div.col-12
+                            div.row
+                                div.col-12
+                                    form.row
+                                        div.offset-lg-6.col-12.col-lg-6
+                                            textarea.form-control(name='yorum')
+                                        div.offset-lg-6.col-12.col-lg-6.mt-2
+                                            input.pull-right.btn.btn-warning(type='submit' value='olustur')
+                        div.yorumlar.col-12.col-lg-6
+                            div.yorum.col-12
+                                p.kullanici-adi alikemal
+                                    span  28.10.2019
+                                p.icerik Çok güzel olmuş
+                                button x
+                            div.yorum.col-12
+                                p.kullanici-adi ayseke
+                                    span  2.10.2019
+                                p.icerik İyi iş çıkarmışsın
             footer.footer.mt-5(style='position:absolute;bottom:0;left:0;width:100%;text-align:center')
                 include footer.jade
+            script.
+                $('.like').mouseenter( (e) => {
+                    $(e.target).removeClass('fa-heart-o');
+                    $(e.target).addClass('fa-heart');
+                    $(e.target).css('color', 'red');
+                });
+                
+                $('.like').mouseleave( (e) => {
+                    $(e.target).removeClass('fa-heart');
+                    $(e.target).addClass('fa-heart-o');
+                    $(e.target).css('color', 'black');
+                });

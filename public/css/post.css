@@ -1,0 +1,42 @@
+.icerik {
+    padding: 10px;
+}
+
+.icerik .icerik-baslik {
+    text-indent: 30px;
+}
+
+.yorumlar {
+    width: 100%;
+    margin-top: 10px;
+    min-height: 50px;
+}
+
+.yorum {
+    border: 1px solid #ddd;
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+.yorum button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    font-weight: bold;
+    color: #000;
+    border: none;
+
+}
+
+.yorum .kullanici-adi {
+    font-weight: bold;
+    margin-bottom: 0 !important;
+}
+
+.yorum span {
+    display: inline;
+    font-size: 9px;
+    color: #aaa;
+    font-weight: bold;
+}

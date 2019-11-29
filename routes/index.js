@@ -14,9 +14,18 @@ router.get('/signup', function(req, res, next) {
   res.render('signup', { title: 'Express' });
 });
 
+router.get('/profile', function(req, res, next) {
+  res.render('profile', { title: 'Express' });
+});
+
+router.get('/search', (req, res, next) => {
+  const key = req.query.key;
+  res.render('search', { key });
+});
+
 router.get('/posts/:uid', (req, res, next) => {
   res.render('post', {
-    id: req.params.uid
+    id: req.query.uid
   });
 });
 module.exports = router;

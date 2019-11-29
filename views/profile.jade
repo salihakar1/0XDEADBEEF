@@ -16,26 +16,35 @@ html(lang="en")
             header
                 include header.jade
             section(style='margin-top:15px;padding: 10px;')
-                h3 Kayıt ol
+                h3 Profil
                 div.container
                     div.row
-                        div.col-12.col-lg-6.offset-lg-3
+                        div.col-12.col-lg-4
                             form(style='border:1px solid #ddd;padding: 10px;margin-top:15px')
                                 div.form-group
                                     label(for='username') Kullanıcı Adı
-                                    input.form-control(id='username' name='username')
+                                    input.form-control(id='username' value='sese' name='username' disabled)
                                 div.form-group
                                     label(for='password') Şifre
-                                    input.form-control(id='password' name='password')
+                                    input.form-control(type='password' id='password' value='123456' name='password')
                                 div.form-group
-                                    label(for='fullname') Ad Soyad
-                                    input.form-control(id='fullname' name='fullname')
+                                    label(for='about') Hakkında
+                                    input.form-control(id='about' value='Ben Serkan Erip' name='password')
                                 div.form-group
                                     label(for='email') Email
-                                    input.form-control(id='email' name='email')
-                                div.form-group
-                                    label(for='hakkinda') Hakkında
-                                    textarea.form-control(id='hakkinda' name='hakkinda')
-                                input.btn.btn-block.btn-warning(value='Kayıt ol')
+                                    input.form-control(type='email' id='email' value='serkanerip@gmail.com' name='email')
+                                input.btn.btn-block.btn-warning(value='Düzenle')
+                        div.col-8
+                            .row
+                                div.col-12
+                                    h5 Beğendiklerim
+                                        ul
+                                            li 
+                                                a(href='/posts/5' style='font-size:13px;') Kodlama Ve Tasarım
+                                div.col-12
+                                    h5 Oluşturduklarım
+                                        ul
+                                            li 
+                                                a(href='/posts/5' style='font-size:13px;') Kodlama Ve Tasarım
             footer.footer.mt-5(style='position:absolute;bottom:0;left:0;width:100%;text-align:center')
                 include footer.jade
