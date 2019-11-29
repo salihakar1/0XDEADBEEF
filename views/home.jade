@@ -45,14 +45,4 @@ html(lang="en")
             footer.footer.mt-5(style='position:absolute;bottom:0;left:0;width:100%;text-align:center')
                 include footer.jade
             script.
-                $('.like').mouseenter( (e) => {
-                    $(e.target).removeClass('fa-heart-o');
-                    $(e.target).addClass('fa-heart');
-                    $(e.target).css('color', 'red');
-                });
-
-                $('.like').mouseleave( (e) => {
-                    $(e.target).removeClass('fa-heart');
-                    $(e.target).addClass('fa-heart-o');
-                    $(e.target).css('color', 'black');
-                });
+                

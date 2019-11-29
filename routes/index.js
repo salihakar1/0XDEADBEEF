@@ -13,4 +13,10 @@ router.get('/login', function(req, res, next) {
 router.get('/signup', function(req, res, next) {
   res.render('signup', { title: 'Express' });
 });
+
+router.get('/posts/:uid', (req, res, next) => {
+  res.render('post', {
+    id: req.params.uid
+  });
+});
 module.exports = router;
