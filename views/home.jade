@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel='stylesheet' href='/css/bootstrap.min.css')
+        script(src='/javascripts/bootstrap.min.js')
+        script(src='/javascripts/jquery.min.js')
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+        link(rel='stylesheet' href='css/home.css')
+        link(href='https://fonts.googleapis.com/css?family=Lato|Roboto:300&display=swap' rel='stylesheet')
+        title 0xdeadbeef
+    body(style='position:relative; padding-bottom: 30px')
+        div.container
+            header
+                include header.jade
+            section(style='margin-top:15px')
+                .card(style='width: 100%; height: 350px; border: 1px solid #ddd')
+                    .header(style='margin-left:5px')
+                        p(style='margin-top:5px;font-weight:300;font-size:1.2rem;margin-bottom: 0') Unit Test Nedir ?
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-calendar" aria-hidden="true"></i> 28.11.2018
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-tags" aria-hidden="true"></i> Test
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-comments" aria-hidden="true"></i> 5
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-heart" aria-hidden="true"></i> 30
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-eye" aria-hidden="true"></i> 130
+                    .content(style='max-height: 250px; overflow: hidden; padding:5px; font-size:.9rem !important;')
+                        p Unit test, software testing(yazılım test etme) metodlarından sadece birisidir. Unit birim anlamına gelir. Matematikteki anlamı bir çokluğu oluşturan varlıkların her biri ya da bir kümenin her elemanı. Yazılımda, kümeye yazdığımız program elemenlarına da fonksiyonlarımız diyebiliriz. Bu fonksiyonları parçaları test etmeye Unit Test denir. Unit testin amacı projemizin gelişim aşamasında iken parçaların doğru çalıştığından emin? olmamızı sağlar. Burda emin? yazmamın nedenini Edsger W. Dijkstra'nın 1969'da söylediği güzel bir söz ile anlatayım "Testing shows the presence, not the absence of bugs". Yani testler bugların yokluğunu değil varlığını gösterir. Şimdi test yazma kısmına geçmeden bu metodları incelemek istiyorum. hashTheUserPassword metodu içinde 3.parti bir kütüphanenin fonksiyonunu kullanılıyor hash algoritması için. Burda eğer ben metodu direk teste sokarsam benim testim bcrypt kütüphanesinin hash metodunu da test etmiş olacak. Unit test kavramına ters bir durum oluşuyor ve eğer o 3.parti fonksiyonun içinde bir hata var ise benim testimin fail olmasına yol açacak. Biz bunun testini unit test aşamasında yapmak istemiyoruz. Onlar başka test aşamalarında test ediliyor ancak konumuz bu değil. Burdan inceleyebilirsiniz geriye kalan test metodlarını.Ben burda 2 tane 3.parti modül kullandım ve test içinde Jest frameworkünü kullandım. Çok basit ve güçlü bir tool. Web sayfasından kolayca öğrenebilirsiniz. Burda dilin ve toolların bir önemi yok. Anlatmak istediğim meseleyi anladıysanız burdaki diğer 3.parti şeyleri anlamanıza gerek yok.Şimdi test sonuçlarına gelelim.
+                    .owncard-footer(style='position:absolute; bottom:0; left:0; width:100%')
+                        a.btn.btn-sm.btn-warning.pull-right.mr-2.mb-2.devamini-oku(href='#' style='border:none; background: red; font-size: .8rem; color: white') Devamını Oku
+                        span.like.ml-2(style='cursor:pointer;') <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                .card(style='width: 100%; height: 350px; border: 1px solid #ddd')
+                    .header(style='margin-left:5px')
+                        p(style='margin-top:5px;font-weight:300; font-size:1.2rem;margin-bottom: 0') Unit Test Nedir ?
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-calendar" aria-hidden="true"></i> 28.11.2018
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-tags" aria-hidden="true"></i> Test
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-comments" aria-hidden="true"></i> 5
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-heart" aria-hidden="true"></i> 30
+                        span(style='margin-left:7px !important;font-size:10px; margin:0; color:#aaa; font-weight:300') <i class="fa fa-eye" aria-hidden="true"></i> 130
+                    .content(style='max-height: 250px; overflow: hidden; padding:5px; font-size:.9rem !important;')
+                        p Unit test, software testing(yazılım test etme) metodlarından sadece birisidir. Unit birim anlamına gelir. Matematikteki anlamı bir çokluğu oluşturan varlıkların her biri ya da bir kümenin her elemanı. Yazılımda, kümeye yazdığımız program elemenlarına da fonksiyonlarımız diyebiliriz. Bu fonksiyonları parçaları test etmeye Unit Test denir. Unit testin amacı projemizin gelişim aşamasında iken parçaların doğru çalıştığından emin? olmamızı sağlar. Burda emin? yazmamın nedenini Edsger W. Dijkstra'nın 1969'da söylediği güzel bir söz ile anlatayım "Testing shows the presence, not the absence of bugs". Yani testler bugların yokluğunu değil varlığını gösterir. Şimdi test yazma kısmına geçmeden bu metodları incelemek istiyorum. hashTheUserPassword metodu içinde 3.parti bir kütüphanenin fonksiyonunu kullanılıyor hash algoritması için. Burda eğer ben metodu direk teste sokarsam benim testim bcrypt kütüphanesinin hash metodunu da test etmiş olacak. Unit test kavramına ters bir durum oluşuyor ve eğer o 3.parti fonksiyonun içinde bir hata var ise benim testimin fail olmasına yol açacak. Biz bunun testini unit test aşamasında yapmak istemiyoruz. Onlar başka test aşamalarında test ediliyor ancak konumuz bu değil. Burdan inceleyebilirsiniz geriye kalan test metodlarını.Ben burda 2 tane 3.parti modül kullandım ve test içinde Jest frameworkünü kullandım. Çok basit ve güçlü bir tool. Web sayfasından kolayca öğrenebilirsiniz. Burda dilin ve toolların bir önemi yok. Anlatmak istediğim meseleyi anladıysanız burdaki diğer 3.parti şeyleri anlamanıza gerek yok.Şimdi test sonuçlarına gelelim.
+                    .owncard-footer(style='position:absolute; bottom:0; left:0; width:100%')
+                        a.btn.btn-sm.btn-warning.pull-right.mr-2.mb-2.devamini-oku(href='#' style='border:none; background: red; font-size: .8rem; color: white') Devamını Oku
+                        span.like.ml-2(style='cursor:pointer;') <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+            footer.footer.mt-5(style='position:absolute;bottom:0;left:0;width:100%;text-align:center')
+                include footer.jade
+            script.
+                $('.like').mouseenter( (e) => {
+                    $(e.target).removeClass('fa-heart-o');
+                    $(e.target).addClass('fa-heart');
+                    $(e.target).css('color', 'red');
+                });
+
+                $('.like').mouseleave( (e) => {
+                    $(e.target).removeClass('fa-heart');
+                    $(e.target).addClass('fa-heart-o');
+                    $(e.target).css('color', 'black');
+                });
